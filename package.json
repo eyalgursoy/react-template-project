@@ -1,7 +1,13 @@
 {
   "name": "react-template-project",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Eyal Gursoy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eyalgursoy/react-template-project"
+  },
+  "homepage": "https://github.com/eyalgursoy/react-template-project#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",
