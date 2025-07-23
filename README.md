@@ -6,7 +6,7 @@ A modern, production-ready React application template built with the latest tech
 
 - **React 19** - Latest React with concurrent features and improved performance
 - **TypeScript** - Full type safety and better developer experience
-- **Material-UI v5** - Beautiful, accessible, and customizable components
+- **Material-UI v7** - Beautiful, accessible, and customizable components
 - **Vite** - Lightning-fast build tool and development server
 - **ESLint + Prettier** - Code quality and consistent formatting
 - **Yarn** - Fast, reliable, and secure package management
@@ -16,7 +16,7 @@ A modern, production-ready React application template built with the latest tech
 - **Frontend Framework**: React 19
 - **Language**: TypeScript
 - **Build Tool**: Vite
-- **UI Library**: Material-UI v5
+- **UI Library**: Material-UI v7
 - **Package Manager**: Yarn
 - **Code Quality**: ESLint + Prettier
 - **Icons**: Material-UI Icons
@@ -32,11 +32,13 @@ A modern, production-ready React application template built with the latest tech
 
 1. Clone or download this template
 2. Install dependencies:
+
    ```bash
    yarn
    ```
 
 3. Start the development server:
+
    ```bash
    yarn dev
    ```

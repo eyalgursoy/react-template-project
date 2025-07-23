@@ -7,7 +7,6 @@ import {
   Box,
   Card,
   CardContent,
-  Grid,
   Button,
   TextField,
   Chip,
@@ -16,6 +15,7 @@ import {
   Drawer,
   List,
   ListItem,
+  ListItemButton,
   ListItemIcon,
   ListItemText,
   Divider,
@@ -59,7 +59,7 @@ function App() {
       icon: '📘',
     },
     {
-      title: 'Material-UI v5',
+      title: 'Material-UI v7',
       description: 'Beautiful, accessible, and customizable components',
       icon: '🎨',
     },
@@ -110,24 +110,30 @@ function App() {
       >
         <Box sx={{ width: 250 }} role='presentation'>
           <List>
-            <ListItem button>
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText primary='Home' />
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary='Home' />
+              </ListItemButton>
             </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <PersonIcon />
-              </ListItemIcon>
-              <ListItemText primary='Profile' />
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <PersonIcon />
+                </ListItemIcon>
+                <ListItemText primary='Profile' />
+              </ListItemButton>
             </ListItem>
             <Divider />
-            <ListItem button>
-              <ListItemIcon>
-                <SettingsIcon />
-              </ListItemIcon>
-              <ListItemText primary='Settings' />
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <SettingsIcon />
+                </ListItemIcon>
+                <ListItemText primary='Settings' />
+              </ListItemButton>
             </ListItem>
           </List>
         </Box>
@@ -142,7 +148,7 @@ function App() {
           </Typography>
           <Typography variant='h5' color='text.secondary' paragraph>
             A modern, production-ready React application template with
-            Material-UI v5, TypeScript, and all the tools you need to build
+            Material-UI v7, TypeScript, and all the tools you need to build
             amazing applications.
           </Typography>
           <Box sx={{ mt: 3 }}>
@@ -159,9 +165,9 @@ function App() {
         <Typography variant='h4' component='h2' gutterBottom sx={{ mb: 4 }}>
           Features
         </Typography>
-        <Grid container spacing={3} sx={{ mb: 6 }}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mb: 6 }}>
           {features.map((feature, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Box key={index} sx={{ flex: '1 1 300px', minWidth: 0 }}>
               <Card
                 sx={{
                   height: '100%',
@@ -181,9 +187,9 @@ function App() {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
 
         {/* Contact Form */}
         <Card sx={{ mb: 4 }}>
@@ -191,8 +197,8 @@ function App() {
             <Typography variant='h5' component='h3' gutterBottom>
               Contact Us
             </Typography>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+              <Box sx={{ flex: '1 1 300px', minWidth: 0 }}>
                 <TextField
                   fullWidth
                   label='Name'
@@ -200,8 +206,8 @@ function App() {
                   onChange={handleInputChange('name')}
                   margin='normal'
                 />
-              </Grid>
-              <Grid item xs={12} sm={6}>
+              </Box>
+              <Box sx={{ flex: '1 1 300px', minWidth: 0 }}>
                 <TextField
                   fullWidth
                   label='Email'
@@ -210,8 +216,8 @@ function App() {
                   onChange={handleInputChange('email')}
                   margin='normal'
                 />
-              </Grid>
-              <Grid item xs={12}>
+              </Box>
+              <Box sx={{ flex: '1 1 100%', minWidth: 0 }}>
                 <TextField
                   fullWidth
                   label='Message'
@@ -221,19 +227,19 @@ function App() {
                   onChange={handleInputChange('message')}
                   margin='normal'
                 />
-              </Grid>
-              <Grid item xs={12}>
+              </Box>
+              <Box sx={{ flex: '1 1 100%', minWidth: 0 }}>
                 <Button variant='contained' size='large'>
                   Send Message
                 </Button>
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
           </CardContent>
         </Card>
 
         {/* Info Cards */}
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={4}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+          <Box sx={{ flex: '1 1 300px', minWidth: 0 }}>
             <Card>
               <CardContent sx={{ textAlign: 'center' }}>
                 <EmailIcon
@@ -247,8 +253,8 @@ function App() {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
-          <Grid item xs={12} md={4}>
+          </Box>
+          <Box sx={{ flex: '1 1 300px', minWidth: 0 }}>
             <Card>
               <CardContent sx={{ textAlign: 'center' }}>
                 <PhoneIcon
@@ -262,8 +268,8 @@ function App() {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
-          <Grid item xs={12} md={4}>
+          </Box>
+          <Box sx={{ flex: '1 1 300px', minWidth: 0 }}>
             <Card>
               <CardContent sx={{ textAlign: 'center' }}>
                 <LocationIcon
@@ -277,8 +283,8 @@ function App() {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
 
         {/* Footer */}
         <Box sx={{ mt: 6, textAlign: 'center' }}>
